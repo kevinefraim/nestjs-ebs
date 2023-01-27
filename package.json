@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "dev":"docker-compose -f docker-compose-dev.yml up",
+    "dev": "docker-compose -f docker-compose-dev.yml up",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -19,16 +19,16 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
-    "deploy":"rm -r dist && yarn ci && yarn build && yarn start:prod",
-    "deploy:d":"docker-compose up --build"
+    "deploy": "npm ci && npm run build && npm run start:prod",
+    "deploy:d": "docker-compose up --build"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",

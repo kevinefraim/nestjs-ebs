@@ -5,14 +5,14 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package*.json ./
-RUN yarn ci
+RUN npm run ci
 
 # Copy app source
 COPY . .
 
 # Build app
-RUN yarn build
+RUN npm run build
 
 # Expose port and start the app
 EXPOSE 3001
-CMD [ "yarn","start:prod" ]
+CMD [ "npm","run","start:prod" ]
