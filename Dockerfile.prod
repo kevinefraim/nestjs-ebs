@@ -1,6 +1,5 @@
-FROM node:alpine
+FROM node:18.13.0
 
-RUN apk add
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -12,10 +11,9 @@ RUN npm ci
 # Copy app source
 COPY . .
 
-RUN npm i -g @nestjs/cli
 # Build app
 RUN npm run build
 
 # Expose port and start the app
 EXPOSE 3001
-CMD [ "npm","run","start" ]
+CMD [ "npm","run","start:prod" ]
