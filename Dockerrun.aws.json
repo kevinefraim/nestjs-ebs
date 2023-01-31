@@ -1,0 +1,34 @@
+{
+    "AWSEBDockerrunVersion": "2",
+   "containerDefinitions":[
+    {
+      "name": "nginx",
+      "image":"front",
+      "hostname":"nginx",
+      "essential":true,
+      "portMappings":[
+        {
+          "hostPort":80,
+          "containerPort":80
+        }
+      ],
+      "links":["frontend","backend"],
+      "memory":100
+    },
+    {
+      "name":"frontend",
+      "image":"frontend",
+      "hostname":"frontend",
+      "essential":false,
+      "memory":300
+    },
+    {
+      "name":"backend",
+      "image":"backend",
+      "hostname":"backend",
+      "essential":false,
+      "memory":300
+    }
+   ]
+  }
+  

@@ -1,0 +1,22 @@
+branch-defaults:
+  master:
+    environment: nest-ebs-dev
+    group_suffix: null
+environment-defaults:
+  nest-ebs-dev:
+    branch: master
+    repository: nest-ebs
+global:
+  application_name: nest-ebs
+  branch: master
+  default_ec2_keyname: aws-eb
+  default_platform: Docker running on 64bit Amazon Linux 2
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: localPC
+  repository: nest-ebs
+  sc: git
+  workspace_type: Application
