@@ -1,6 +1,5 @@
-import { Controller, Get, Post, Delete, Param, Body } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { MeetingService } from './meeting.service';
-import { Meeting } from '@prisma/client';
 
 @Controller('meetings')
 export class MeetingController {
